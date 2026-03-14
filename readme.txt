@@ -1,129 +1,75 @@
-==================================================================================================
+# Harsh Kumar — Developer Portfolio
 
-DESCRIPTION:
+This repository contains the source code for my personal developer portfolio website.
+The portfolio showcases my projects, technical skills, and experience as a frontend developer.
 
-HUDSON is a simple and modern free personal website template designed for creatives and 
-professionals who want to showcase their skills and work in an eye-catching way. Its simple yet 
-sophisticated design is perfect for anyone who wants to create a polished and professional online 
-presence without spending a lot of time or money on web development.
+## Live Website
 
-==================================================================================================
+View the live portfolio here:
+**https://your-netlify-domain.netlify.app**
 
+## About the Project
 
-LICENSE:
+This portfolio is designed to present my work, skills, and projects in a clean and modern way. It includes sections for:
 
-This free resource is provided by styleshout.com and is free to use in 
-both personal and commercial projects.
+* Introduction / Hero section
+* About Me
+* Skills
+* Projects
+* Contact information
 
+The goal of this portfolio is to provide recruiters, collaborators, and visitors with an overview of my development work and capabilities.
 
-Rights:
--------
+## Technologies Used
 
-You are permitted to use this free resource in any number of personal and commercial projects for 
-yourself or a client. You may modify the resource according to your requirements and include them 
-in your projects under the following condition - you MUST give appropriate credit, provide an 
-attribution link to styleshout.com.
+* HTML5
+* CSS3
+* JavaScript
+* Responsive Design
+* Modern UI components and animations
 
+## Features
 
-Prohibitions:
--------------
+* Fully responsive design
+* Smooth scrolling navigation
+* Animated sections
+* Project showcase
+* Contact information
 
-You are not permitted to resell or redistribute(even for free) the resource "as is" without 
-prior consent. If you would like to republish or promote this resource on your site, please 
-link back to the appropriate resource page on styleshout.com where users can find the download 
-and not directly to the download zip file.
+## Project Structure
 
+```
+/
+│
+├── index.html
+├── css/
+│   └── styles.css
+├── js/
+│   └── main.js
+├── images/
+└── assets/
+```
 
-Attribution: 
-------------
+## Deployment
 
-You must include a credit link to our website(https://styleshout.com) somewhere on your site. 
-We prefer the footer credit that comes with the template but you are still free to move it 
-somewhere else.
+This website is deployed using **Netlify** and connected to this GitHub repository for automatic deployments.
 
+Whenever changes are pushed to the `main` branch, Netlify automatically rebuilds and deploys the updated site.
 
+## Credits
 
-If you have any questions about the License, feel free to contact us.
+This portfolio is built using the **HUDSON template** originally created by **StyleShout**.
 
+Template source:
+https://styleshout.com/
 
------------------------------------------------------------------------------------------------------
+The template has been modified and customized for personal portfolio use.
 
+## License
 
-REMOVING THE ATTRIBUTION LINK:
+This project is for portfolio and demonstration purposes.
+The base template follows the licensing terms provided by StyleShout.
 
-We understand that there are situations where you want to use our templates without 
-the crediting obligation. If that's your case, you can always send us a 
-credit removal fee of 10 USD through Paypal. This will allow you to use a single 
-template attribution/credit link free on ONE DOMAIN name.
+---
 
-You can send your payments through Paypal to this address: ealigam@gmail.com or
-visit our attribution removal page: https://styleshout.com/attribution-free/ 
-and click the pay button on the page.
-
-If possible, kindly send us the site's url where the template is being used. 
-Also, keep your Paypal receipt as proof of payment and your good to go.
-
-
------------------------------------------------------------------------------------------------------- 
-
-
-SUPPORT:
-    
-Since HUDSON is distributed for free, support is not offered. HUDSON is coded according 
-to current web standards and we did our best to make the template easy to use and modify.
-If you have minimum web development experience, you can easily modify the template. 
-However, If you're still new to HTML and CSS, I suggest that you visit the 
-following tutorials:
-
- - https://marksheet.io/
- - http://learn.shayhowe.com/html-css/
-
-These will teach you the essentials of HTML and CSS. In addition, if you want to include
-javascript in your skill-set, you can also check out these tutorials: 
-
- - https://www.codecademy.com/learn/introduction-to-javascript
- - https://javascript.info/
-
-
-
-
--------------------------------------------------------------------------------------------------------
-
-
-GET THE LATEST VERSION:
-
-We update our templates on a regular basis so to make sure that you have the latest version, 
-always download the template files directly on our website(https://styleshout.com/)
-
-
-
--------------------------------------------------------------------------------------------------------
-
-
-SOURCES AND CREDITS:
-
-I've used the following resources as listed.
-
-Fonts:
- - Castoro Font (https://fonts.google.com/specimen/Castoro)
- - Public Sans Font (https://fonts.google.com/specimen/Public+Sans)
-
-Icons:
- - Boxicons (https://boxicons.com/)
- - Iconmonstr (https://iconmonstr.com/)
-
-Stock Photos and Graphics:
- - Unsplash.com (https://unsplash.com/)
- 
-Javascript Files:
- - MoveTo.js (https://github.com/hsnaydd/moveTo)
- - Prism.js (https://prismjs.com/)
- - Swiper JS (https://swiperjs.com/)
- - GLightbox (https://biati-digital.github.io/glightbox/)
-
--------------------------------------------------------------------------------------------------------
-
-
-Thanks for downloading from StyleShout :)
-
-
+© 2026 Harsh Kumar
