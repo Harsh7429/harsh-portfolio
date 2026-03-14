@@ -1,0 +1,2059 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Harsh Kumar — Front-End Developer</title>
+    <meta name="description" content="Harsh Kumar is a Front-End Developer from Patna, India specialising in responsive websites, interactive UIs and UI/UX design using HTML5, CSS3 and JavaScript. View projects, internship experience and contact information.">
+    <meta name="keywords" content="Harsh Kumar, Front-End Developer, HTML CSS JavaScript, responsive web design, UI UX, portfolio, Patna India">
+    <meta name="author" content="Harsh Kumar">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph / LinkedIn / WhatsApp sharing -->
+    <meta property="og:type"        content="website">
+    <meta property="og:title"       content="Harsh Kumar — Front-End Developer">
+    <meta property="og:description" content="Front-End Developer building modern, responsive web interfaces. Available for roles & internships.">
+    <meta property="og:url"         content="https://harsh7429.github.io">
+    <meta property="og:image"       content="og-preview.png">
+
+    <!-- Twitter card -->
+    <meta name="twitter:card"        content="summary_large_image">
+    <meta name="twitter:title"       content="Harsh Kumar — Front-End Developer">
+    <meta name="twitter:description" content="Front-End Developer building modern, responsive web interfaces.">
+    <meta name="twitter:image"       content="og-preview.png">
+
+    <!-- Structured data (Google person schema) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Harsh Kumar",
+      "jobTitle": "Front-End Developer",
+      "url": "https://harsh7429.github.io",
+      "email": "harsh7429@gmail.com",
+      "telephone": "+91-9110158576",
+      "address": { "@type": "PostalAddress", "addressLocality": "Patna", "addressRegion": "Bihar", "addressCountry": "IN" },
+      "sameAs": [
+        "https://linkedin.com/in/harsh7429",
+        "https://github.com/harsh7429"
+      ]
+    }
+    </script>
+
+    <script>document.documentElement.classList.remove('no-js');document.documentElement.classList.add('js');</script>
+
+    <!-- AOS for scroll animations -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <link rel="stylesheet" href="css/vendor.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Plus Jakarta Sans: readable but more personality than Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="manifest" href="site.webmanifest">
+
+    <style>
+    /* ============================================================
+       HARSH KUMAR — PORTFOLIO v6
+       Professional upgrade: visual hierarchy, animations, cards
+       Font: Plus Jakarta Sans (readable, modern, not bland)
+       Palette: slate dark + electric blue + clean whites
+    ============================================================ */
+
+    :root {
+        --font:        'Plus Jakarta Sans', 'Inter', sans-serif;
+        --mono:        'JetBrains Mono', 'Courier New', monospace;
+
+        /* Core palette */
+        --bg:          #f8fafc;
+        --bg-2:        #ffffff;
+        --bg-3:        #f1f5f9;
+        --border:      #e2e8f0;
+        --border-2:    #cbd5e1;
+
+        /* Blues */
+        --blue:        #2563eb;
+        --blue-d:      #1d4ed8;
+        --blue-light:  #eff6ff;
+        --blue-mid:    #dbeafe;
+        --blue-text:   #1e40af;
+
+        /* Accent */
+        --cyan:        #06b6d4;
+        --green:       #16a34a;
+        --green-bg:    #dcfce7;
+
+        /* Text */
+        --text:        #0f172a;
+        --text-2:      #334155;
+        --text-3:      #64748b;
+        --text-4:      #94a3b8;
+        --white:       #ffffff;
+        --dark:        #0f172a;
+
+        /* Gradients */
+        --grad-hero:   linear-gradient(135deg, #eff6ff 0%, #f8fafc 50%, #f0fdf4 100%);
+        --grad-blue:   linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+        --grad-dark:   linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+
+        /* Hudson overrides */
+        --color-1:        #2563eb;
+        --color-3:        #ffffff;
+        --color-3-dark:   #ffffff;
+        --color-body-bg:  #f8fafc;
+        --color-text:     #0f172a;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+        background: var(--bg);
+        font-family: var(--font);
+        color: var(--text);
+        -webkit-font-smoothing: antialiased;
+        overflow-x: hidden;
+    }
+    a { color: var(--blue); transition: color 0.2s; }
+    a:hover { color: var(--blue-d); }
+
+    /* ══════════════════════════════
+       PRELOADER
+    ══════════════════════════════ */
+    #preloader { background: var(--bg); }
+    #loader div { background: var(--blue) !important; }
+
+    /* ══════════════════════════════
+       HEADER — always white/light
+    ══════════════════════════════ */
+    .s-header,
+    .s-header.sticky,
+    .s-header.scrolling,
+    .s-header.sticky.scrolling {
+        background: rgba(248,250,252,0.96) !important;
+        backdrop-filter: blur(16px) !important;
+        -webkit-backdrop-filter: blur(16px) !important;
+        border-bottom: 1px solid var(--border) !important;
+        box-shadow: 0 1px 8px rgba(0,0,0,0.05) !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+    }
+
+    /* Logo */
+    .s-header__logo img { display: none; }
+    .s-header__logo a { color: inherit !important; text-decoration: none; }
+    .s-header__logo a::after {
+        content: '<Harsh />';
+        font-family: var(--mono);
+        font-size: 1.6rem;
+        font-weight: 500;
+        color: var(--blue);
+        letter-spacing: -0.02em;
+    }
+
+    /* Scroll progress bar */
+    .hk-progress {
+        position: fixed;
+        top: 0; left: 0;
+        height: 3px;
+        background: var(--grad-blue);
+        z-index: 9999;
+        width: 0%;
+        transition: width 0.1s linear;
+    }
+
+    /* Nav */
+    .s-header__menu-links a {
+        font-family: var(--font) !important;
+        font-size: 1.4rem !important;
+        font-weight: 600 !important;
+        letter-spacing: 0 !important;
+        text-transform: none !important;
+        color: var(--text-3) !important;
+        padding-bottom: 2px !important;
+        border-bottom: 2px solid transparent !important;
+        transition: color 0.2s, border-color 0.2s !important;
+    }
+    .s-header__menu-links a:hover,
+    .s-header__menu-links .current a {
+        color: var(--blue) !important;
+        border-bottom-color: var(--blue) !important;
+    }
+
+    /* ══════════════════════════════
+       HERO
+    ══════════════════════════════ */
+    .s-intro {
+        background: var(--grad-hero);
+        position: relative;
+        overflow: hidden;
+        min-height: 100vh;
+    }
+
+    /* Animated mesh background */
+    .s-intro::before {
+        content: '';
+        position: absolute; inset: 0;
+        background-image: radial-gradient(circle at 20% 80%, rgba(37,99,235,0.06) 0%, transparent 50%),
+                          radial-gradient(circle at 80% 20%, rgba(6,182,212,0.06) 0%, transparent 50%),
+                          radial-gradient(circle, #cbd5e1 1px, transparent 1px);
+        background-size: 100% 100%, 100% 100%, 32px 32px;
+        opacity: 0.7;
+        pointer-events: none; z-index: 0;
+    }
+
+    .s-intro__content-inner { position: relative; z-index: 1; }
+
+    /* Hello badge */
+    .hk-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background: var(--green-bg);
+        border: 1px solid rgba(22,163,74,0.25);
+        border-radius: 20px;
+        padding: 6px 16px 6px 10px;
+        font-size: 1.3rem;
+        font-weight: 700;
+        color: var(--green);
+        margin-bottom: 2.8rem;
+        width: fit-content;
+        animation: slideDown 0.6s ease both;
+    }
+    .hk-badge-dot {
+        width: 9px; height: 9px;
+        background: var(--green);
+        border-radius: 50%;
+        animation: bdot 2s ease-in-out infinite;
+    }
+    @keyframes bdot { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:0.4;transform:scale(0.7)} }
+    @keyframes slideDown { from{opacity:0;transform:translateY(-10px)} to{opacity:1;transform:translateY(0)} }
+
+    /* Pretitle — FULLY reset Hudson */
+    .s-intro__content-pretitle,
+    .s-intro__content-pretitle.text-pretitle {
+        font-family: var(--mono) !important;
+        font-size: 1.5rem !important;
+        font-weight: 400 !important;
+        color: var(--blue) !important;
+        text-transform: none !important;
+        letter-spacing: 0.02em !important;
+        transform: none !important;
+        background: none !important;
+        border: none !important;
+        padding: 0 !important;
+        margin-bottom: 1.2rem !important;
+        line-height: 1.5 !important;
+        display: block !important;
+        opacity: 1 !important;
+        animation: none !important;
+    }
+    .s-intro__content-pretitle::before { display: none !important; }
+
+    /* Hero title */
+    .s-intro__content-title {
+        font-family: var(--font) !important;
+        font-weight: 800 !important;
+        font-size: clamp(4.8rem, 8vw, 9.6rem) !important;
+        line-height: 1.05 !important;
+        letter-spacing: -0.04em !important;
+        color: var(--text) !important;
+        font-style: normal !important;
+        margin-bottom: 0 !important;
+        animation: heroReveal 0.8s 0.2s ease both;
+    }
+    @keyframes heroReveal { from{opacity:0;transform:translateY(30px)} to{opacity:1;transform:translateY(0)} }
+
+    .name-gradient {
+        background: linear-gradient(135deg, var(--blue) 0%, var(--cyan) 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+    }
+
+    /* Typewriter subtitle */
+    .hk-typewriter-wrap {
+        font-size: 1.9rem;
+        font-weight: 500;
+        color: var(--text-2);
+        margin-top: 1.6rem;
+        margin-bottom: 1.4rem;
+        min-height: 3rem;
+        animation: heroReveal 0.8s 0.4s ease both;
+    }
+    #hk-typewriter { color: var(--blue); font-weight: 700; }
+    .cursor { display: inline-block; width: 2px; height: 1.1em; background: var(--blue); margin-left: 2px; vertical-align: text-bottom; animation: blink 0.9s step-end infinite; }
+    @keyframes blink { 0%,100%{opacity:1} 50%{opacity:0} }
+
+    /* Hero sub */
+    .hk-hero-sub {
+        font-size: 1.75rem;
+        font-weight: 400;
+        color: var(--text-3);
+        margin-bottom: 3.4rem;
+        max-width: 50rem;
+        line-height: 1.7;
+        animation: heroReveal 0.8s 0.55s ease both;
+    }
+
+    /* Hero stat pills */
+    .hk-hero-stats {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1.2rem;
+        margin-bottom: 3.2rem;
+        animation: heroReveal 0.8s 0.65s ease both;
+    }
+    .hk-stat-pill {
+        background: var(--bg-2);
+        border: 1px solid var(--border);
+        border-radius: 50px;
+        padding: 0.7rem 1.6rem;
+        font-size: 1.3rem;
+        font-weight: 600;
+        color: var(--text-2);
+        display: flex;
+        align-items: center;
+        gap: 0.6rem;
+        box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+    }
+    .hk-stat-pill span { color: var(--blue); font-weight: 800; font-size: 1.5rem; }
+
+    /* Buttons */
+    .s-intro__content-btns { animation: heroReveal 0.8s 0.75s ease both; }
+    .s-intro__content-btns .btn,
+    .s-intro__btn-download .btn {
+        font-family: var(--font) !important;
+        font-size: 1.5rem !important;
+        font-weight: 700 !important;
+        border-radius: 10px !important;
+        padding: 1.3rem 2.8rem !important;
+        letter-spacing: 0 !important;
+        text-transform: none !important;
+        transition: all 0.22s cubic-bezier(0.34,1.56,0.64,1) !important;
+    }
+    .s-intro__content-btns .btn:not(.btn--stroke) {
+        background: var(--grad-blue) !important;
+        color: var(--white) !important;
+        border: none !important;
+        box-shadow: 0 4px 18px rgba(37,99,235,0.3), 0 0 0 0 rgba(37,99,235,0.3) !important;
+    }
+    .s-intro__content-btns .btn:not(.btn--stroke):hover {
+        transform: translateY(-3px) scale(1.02) !important;
+        box-shadow: 0 10px 30px rgba(37,99,235,0.4) !important;
+    }
+    .s-intro__content-btns .btn--stroke {
+        background: transparent !important;
+        border: 2px solid var(--border-2) !important;
+        color: var(--text-2) !important;
+    }
+    .s-intro__content-btns .btn--stroke:hover {
+        border-color: var(--blue) !important;
+        color: var(--blue) !important;
+        background: var(--blue-light) !important;
+        transform: translateY(-3px) !important;
+    }
+    .s-intro__btn-download .btn--stroke {
+        background: transparent !important;
+        border: 1.5px solid var(--border-2) !important;
+        color: var(--text-3) !important;
+        font-size: 1.3rem !important;
+        border-radius: 8px !important;
+        letter-spacing: 0 !important;
+        text-transform: none !important;
+    }
+    .s-intro__btn-download .btn--stroke:hover { border-color: var(--blue) !important; color: var(--blue) !important; }
+
+    .s-intro__social svg { fill: var(--text-4) !important; transition: fill 0.2s, transform 0.2s; }
+    .s-intro__social a:hover svg { fill: var(--blue) !important; transform: scale(1.2) rotate(-5deg); }
+    .s-intro__content-media { opacity: 0.06; filter: grayscale(100%); }
+    .scroll-icon svg { fill: var(--text-4) !important; }
+
+    /* ══════════════════════════════
+       MARQUEE
+    ══════════════════════════════ */
+    .hk-marquee {
+        background: var(--dark);
+        padding: 1.2rem 0;
+        overflow: hidden;
+        white-space: nowrap;
+    }
+    .hk-marquee-track { display: inline-flex; animation: mscroll 35s linear infinite; }
+    .hk-marquee-item { font-family: var(--mono); font-size: 1.4rem; color: rgba(255,255,255,0.38); padding: 0 2.6rem; letter-spacing: 0.06em; }
+    .hk-marquee-item .dot { color: var(--cyan); margin-right: 0.8rem; }
+    @keyframes mscroll { from{transform:translateX(0)} to{transform:translateX(-50%)} }
+
+    /* ══════════════════════════════
+       COMMON SECTION STYLES
+    ══════════════════════════════ */
+    .text-display-title {
+        font-family: var(--font) !important;
+        font-weight: 800 !important;
+        font-style: normal !important;
+        font-size: clamp(3.4rem, 4.5vw, 5rem) !important;
+        color: var(--text) !important;
+        letter-spacing: -0.03em !important;
+    }
+    .section-header[data-num]::before {
+        font-family: var(--mono) !important;
+        font-size: 1.3rem !important;
+        color: var(--blue) !important;
+        font-weight: 500 !important;
+        letter-spacing: 0.05em !important;
+    }
+
+    /* Section label chip */
+    .hk-section-chip {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        background: var(--blue-mid);
+        color: var(--blue-text);
+        font-size: 1.15rem;
+        font-weight: 700;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        padding: 5px 14px;
+        border-radius: 20px;
+        margin-bottom: 1.2rem;
+    }
+
+    /* ══════════════════════════════
+       ABOUT SECTION
+    ══════════════════════════════ */
+    .s-about { background: var(--bg); border-top: 1px solid var(--border); }
+    .attention-getter { font-size: 1.85rem; line-height: 1.75; color: var(--text-2); font-weight: 400; }
+    .attention-getter strong { color: var(--text); font-weight: 700; }
+
+    /* Skills grid — icon style */
+    .hk-skills-wrap { margin-top: 3.6rem; }
+    .hk-skills-title {
+        font-size: 1.3rem;
+        font-weight: 700;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--text-4);
+        margin-bottom: 1.8rem;
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+    }
+    .hk-skills-title::after { content: ''; flex: 1; height: 1px; background: var(--border); }
+
+    .hk-skills-grid {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+    .hk-skill {
+        display: flex;
+        align-items: center;
+        gap: 0.7rem;
+        background: var(--bg-2);
+        border: 1.5px solid var(--border);
+        border-radius: 8px;
+        padding: 0.8rem 1.4rem;
+        font-size: 1.3rem;
+        font-weight: 600;
+        color: var(--text-2);
+        transition: all 0.2s cubic-bezier(0.34,1.56,0.64,1);
+        cursor: default;
+    }
+    .hk-skill:hover {
+        border-color: var(--blue);
+        color: var(--blue);
+        background: var(--blue-light);
+        transform: translateY(-3px) scale(1.03);
+        box-shadow: 0 6px 16px rgba(37,99,235,0.15);
+    }
+    .hk-skill-icon { font-size: 1.5rem; }
+
+    /* ══════════════════════════════
+       CERTIFICATIONS — premium cards
+    ══════════════════════════════ */
+    .hk-certs-wrap { margin-top: 4rem; }
+    .hk-cert-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(28rem, 1fr));
+        gap: 1.4rem;
+    }
+    .hk-cert-card {
+        background: var(--bg-2);
+        border: 1.5px solid var(--border);
+        border-radius: 14px;
+        padding: 2.2rem 2.4rem;
+        display: flex;
+        align-items: flex-start;
+        gap: 1.6rem;
+        transition: all 0.22s;
+        position: relative;
+        overflow: hidden;
+    }
+    .hk-cert-card::before {
+        content: '';
+        position: absolute;
+        top: 0; left: 0;
+        width: 4px; height: 100%;
+        background: var(--grad-blue);
+        border-radius: 4px 0 0 4px;
+        opacity: 0;
+        transition: opacity 0.2s;
+    }
+    .hk-cert-card:hover { border-color: var(--blue); box-shadow: 0 8px 28px rgba(37,99,235,0.1); transform: translateY(-4px); }
+    .hk-cert-card:hover::before { opacity: 1; }
+    .hk-cert-icon {
+        width: 46px; height: 46px;
+        background: var(--blue-mid);
+        border-radius: 10px;
+        display: flex; align-items: center; justify-content: center;
+        font-size: 2rem;
+        flex-shrink: 0;
+        transition: background 0.2s;
+    }
+    .hk-cert-card:hover .hk-cert-icon { background: var(--blue-mid); }
+    .hk-cert-body { flex: 1; }
+    .hk-cert-name { font-size: 1.6rem; font-weight: 700; color: var(--text); margin-bottom: 0.3rem; line-height: 1.4; }
+    .hk-cert-issuer { font-size: 1.4rem; color: var(--blue); font-weight: 600; }
+
+    /* ══════════════════════════════
+       ABOUT BLOCK TITLES
+    ══════════════════════════════ */
+    .s-about__block-title {
+        font-size: 1.3rem;
+        font-weight: 800;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--text-4);
+        border-bottom: 2px solid var(--border);
+        padding-bottom: 1rem;
+        margin-bottom: 2.2rem;
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+    }
+    .s-about__block-title::before {
+        content: '';
+        display: inline-block;
+        width: 4px; height: 18px;
+        background: var(--grad-blue);
+        border-radius: 2px;
+        flex-shrink: 0;
+    }
+
+    /* ══════════════════════════════
+       EXPERIENCE TIMELINE
+    ══════════════════════════════ */
+    .hk-timeline { position: relative; padding-left: 2.4rem; }
+    .hk-timeline::before {
+        content: '';
+        position: absolute;
+        top: 1.2rem; left: 0.7rem;
+        bottom: 0;
+        width: 2px;
+        background: linear-gradient(to bottom, var(--blue), var(--border));
+        border-radius: 2px;
+    }
+    .hk-timeline-item {
+        position: relative;
+        margin-bottom: 2rem;
+        background: var(--bg-2);
+        border: 1.5px solid var(--border);
+        border-radius: 12px;
+        padding: 2.2rem 2.4rem;
+        transition: all 0.22s;
+    }
+    .hk-timeline-item::before {
+        content: '';
+        position: absolute;
+        left: -3.1rem; top: 2.2rem;
+        width: 14px; height: 14px;
+        background: var(--blue);
+        border: 3px solid var(--bg);
+        border-radius: 50%;
+        box-shadow: 0 0 0 3px var(--blue-mid);
+    }
+    .hk-timeline-item:hover {
+        border-color: var(--blue);
+        box-shadow: 0 8px 28px rgba(37,99,235,0.1);
+        transform: translateX(6px);
+    }
+    .hk-tl-role { font-size: 1.7rem; font-weight: 800; color: var(--text); margin-bottom: 0.3rem; }
+    .hk-tl-company {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.6rem;
+        font-size: 1.5rem;
+        color: var(--blue);
+        font-weight: 600;
+        margin-bottom: 1.4rem;
+    }
+    .hk-tl-badge {
+        background: var(--blue-mid);
+        color: var(--blue-text);
+        font-size: 1.1rem;
+        font-weight: 700;
+        padding: 2px 10px;
+        border-radius: 20px;
+    }
+    .hk-tl-list { list-style: none; padding: 0; margin: 0; }
+    .hk-tl-list li {
+        font-size: 1.4rem;
+        color: var(--text-2);
+        padding: 0.35rem 0 0.35rem 1.8rem;
+        position: relative;
+        line-height: 1.6;
+    }
+    .hk-tl-list li::before { content: '▸'; position: absolute; left: 0; color: var(--blue); font-size: 1rem; top: 0.55rem; }
+
+    /* ══════════════════════════════
+       EDUCATION CARDS
+    ══════════════════════════════ */
+    .hk-edu-card {
+        background: var(--bg-2);
+        border: 1.5px solid var(--border);
+        border-radius: 12px;
+        padding: 2.2rem 2.4rem;
+        margin-bottom: 1.2rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 2rem;
+        transition: all 0.22s;
+        position: relative;
+        overflow: hidden;
+    }
+    .hk-edu-card::after {
+        content: '';
+        position: absolute;
+        bottom: 0; left: 0;
+        height: 3px; width: 0;
+        background: var(--grad-blue);
+        transition: width 0.3s ease;
+    }
+    .hk-edu-card:hover { border-color: var(--blue); box-shadow: 0 8px 24px rgba(37,99,235,0.09); transform: translateY(-3px); }
+    .hk-edu-card:hover::after { width: 100%; }
+    .hk-edu-degree { font-size: 1.6rem; font-weight: 800; color: var(--text); margin-bottom: 0.35rem; }
+    .hk-edu-school { font-size: 1.45rem; color: var(--text-2); font-weight: 500; }
+    .hk-edu-badge {
+        text-align: center;
+        flex-shrink: 0;
+        min-width: 8rem;
+    }
+    .hk-edu-year {
+        font-family: var(--mono);
+        font-size: 1.2rem;
+        font-weight: 700;
+        color: var(--white);
+        background: var(--grad-blue);
+        padding: 0.5rem 1.4rem;
+        border-radius: 8px;
+        display: inline-block;
+        margin-bottom: 0.5rem;
+    }
+    .hk-edu-cgpa { font-size: 1.35rem; color: var(--text-4); font-weight: 600; }
+
+    /* ══════════════════════════════
+       CONTACT LIST (about section)
+    ══════════════════════════════ */
+    .hk-contact-list { list-style: none; padding: 0; margin: 0; }
+    .hk-contact-row {
+        display: flex;
+        align-items: center;
+        gap: 1.4rem;
+        padding: 1.4rem 1.6rem;
+        border-radius: 10px;
+        margin-bottom: 0.6rem;
+        transition: background 0.2s, transform 0.2s;
+        cursor: default;
+    }
+    .hk-contact-row:hover { background: var(--blue-light); transform: translateX(4px); }
+    .hk-contact-row:hover .hk-ci { background: var(--blue); }
+    .hk-ci {
+        width: 40px; height: 40px;
+        background: var(--blue-mid);
+        border-radius: 10px;
+        display: flex; align-items: center; justify-content: center;
+        font-size: 1.6rem;
+        flex-shrink: 0;
+        transition: background 0.2s;
+    }
+    .hk-cl { font-size: 1.35rem; font-weight: 700; color: var(--text-4); letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 0.2rem; }
+    .hk-cv { font-size: 1.55rem; font-weight: 600; color: var(--blue); text-decoration: none; }
+    .hk-cv:hover { color: var(--blue-d); text-decoration: underline; }
+    .hk-cv.plain { color: var(--text-2); }
+
+    /* ══════════════════════════════
+       PROJECTS SECTION
+    ══════════════════════════════ */
+    .s-works { background: var(--bg-3); border-top: 1px solid var(--border); }
+
+    .entry__thumb { overflow: hidden; position: relative; border-radius: 12px 12px 0 0; }
+    .entry__thumb img { transition: transform 0.4s ease; display: block; width: 100%; }
+    .entry__link:hover .entry__thumb img { transform: scale(1.07); }
+    .entry__thumb::after {
+        content: '';
+        position: absolute; inset: 0;
+        background: linear-gradient(135deg, rgba(37,99,235,0.82), rgba(6,182,212,0.65));
+        opacity: 0; transition: opacity 0.28s;
+    }
+    .entry__link:hover .entry__thumb::after { opacity: 1; }
+    .hk-view {
+        position: absolute; top: 50%; left: 50%;
+        transform: translate(-50%, -60%);
+        z-index: 2;
+        font-size: 1.35rem; font-weight: 700; color: var(--white);
+        border: 2px solid rgba(255,255,255,0.9);
+        padding: 0.9rem 2.2rem; border-radius: 8px;
+        opacity: 0;
+        transition: opacity 0.28s, transform 0.28s;
+        pointer-events: none; white-space: nowrap;
+        backdrop-filter: blur(4px);
+    }
+    .entry__link:hover .hk-view { opacity: 1; transform: translate(-50%, -50%); }
+    .entry__info {
+        background: var(--bg-2);
+        border: 1.5px solid var(--border);
+        border-top: none;
+        border-radius: 0 0 12px 12px;
+        padding: 2rem 2.2rem;
+        transition: border-color 0.22s, box-shadow 0.22s;
+    }
+    .entry__link:hover .entry__info { border-color: var(--blue); box-shadow: 0 12px 30px rgba(0,0,0,0.07); }
+    .entry__title { font-family: var(--font) !important; font-size: 1.75rem !important; font-weight: 800 !important; color: var(--text) !important; font-style: normal !important; margin-bottom: 0.5rem; }
+    .entry__cat { font-family: var(--mono) !important; font-size: 1.4rem !important; color: var(--blue) !important; text-transform: none !important; letter-spacing: 0 !important; font-weight: 500 !important; }
+
+    /* ══════════════════════════════
+       STATS — animated cards
+    ══════════════════════════════ */
+    #numbers {
+        background: var(--grad-dark);
+        border-top: none;
+        padding: 8rem 0;
+        position: relative;
+        overflow: hidden;
+    }
+    #numbers::before {
+        content: '';
+        position: absolute; inset: 0;
+        background-image: radial-gradient(circle at 15% 50%, rgba(37,99,235,0.12) 0%, transparent 50%),
+                          radial-gradient(circle at 85% 50%, rgba(6,182,212,0.08) 0%, transparent 50%);
+        pointer-events: none;
+    }
+    .hk-stats-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 2rem;
+        position: relative;
+        z-index: 1;
+    }
+    @media (max-width: 900px) { .hk-stats-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 500px) { .hk-stats-grid { grid-template-columns: 1fr; } }
+
+    .hk-stat-card {
+        background: rgba(255,255,255,0.04);
+        border: 1px solid rgba(255,255,255,0.08);
+        border-radius: 20px;
+        padding: 3.6rem 2.8rem 3.2rem;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+        transition: transform 0.3s cubic-bezier(0.34,1.56,0.64,1),
+                    box-shadow 0.3s ease,
+                    border-color 0.3s ease,
+                    background 0.3s ease;
+        cursor: default;
+    }
+    .hk-stat-card::before {
+        content: '';
+        position: absolute; inset: 0;
+        background: linear-gradient(135deg, rgba(37,99,235,0.08), rgba(6,182,212,0.04));
+        opacity: 0;
+        transition: opacity 0.3s;
+    }
+    .hk-stat-card:hover {
+        transform: translateY(-12px);
+        box-shadow: 0 24px 60px rgba(0,0,0,0.35), 0 0 0 1px rgba(37,99,235,0.3);
+        border-color: rgba(37,99,235,0.4);
+        background: rgba(255,255,255,0.07);
+    }
+    .hk-stat-card:hover::before { opacity: 1; }
+
+    /* Icon circle */
+    .hk-stat-icon {
+        width: 64px; height: 64px;
+        border-radius: 18px;
+        display: flex; align-items: center; justify-content: center;
+        margin: 0 auto 2.2rem;
+        font-size: 2.6rem;
+        position: relative;
+        z-index: 1;
+        transition: transform 0.3s cubic-bezier(0.34,1.56,0.64,1);
+    }
+    .hk-stat-card:hover .hk-stat-icon { transform: rotate(-8deg) scale(1.15); }
+
+    .hk-stat-icon-blue { background: rgba(37,99,235,0.18); }
+    .hk-stat-icon-cyan { background: rgba(6,182,212,0.15); }
+    .hk-stat-icon-green { background: rgba(22,163,74,0.15); }
+    .hk-stat-icon-purple { background: rgba(139,92,246,0.15); }
+
+    /* Number */
+    .hk-stat-num {
+        font-family: var(--font);
+        font-weight: 800;
+        font-size: 5.2rem;
+        color: var(--white);
+        line-height: 1;
+        letter-spacing: -0.04em;
+        position: relative; z-index: 1;
+        display: flex; align-items: baseline; justify-content: center;
+        gap: 0.2rem;
+    }
+    .hk-stat-num sup {
+        font-size: 2.6rem;
+        font-weight: 700;
+        color: var(--blue);
+        letter-spacing: 0;
+    }
+    .hk-stat-label {
+        font-family: var(--font);
+        font-size: 1.5rem;
+        font-weight: 800;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: rgba(255,255,255,0.5);
+        margin-top: 0.8rem;
+        position: relative; z-index: 1;
+    }
+    .hk-stat-desc {
+        font-size: 1.4rem;
+        color: rgba(255,255,255,0.3);
+        margin-top: 0.6rem;
+        font-weight: 400;
+        line-height: 1.5;
+        position: relative; z-index: 1;
+    }
+
+    /* ══════════════════════════════
+       FOOTER / CONTACT
+    ══════════════════════════════ */
+    .s-footer { background: var(--dark); border-top: none; }
+    .s-footer .text-display-title { color: var(--white) !important; }
+    .s-footer .section-header[data-num]::before { color: #58a6ff !important; }
+    .s-footer .attention-getter { font-size: 1.65rem; color: rgba(255,255,255,0.45); line-height: 1.75; }
+
+    /* Contact cards grid */
+    .hk-footer-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.2rem;
+        margin-top: 2.8rem;
+    }
+    @media (max-width: 600px) { .hk-footer-grid { grid-template-columns: 1fr; } }
+    .hk-fcard {
+        background: rgba(255,255,255,0.04);
+        border: 1px solid rgba(255,255,255,0.08);
+        border-radius: 14px;
+        padding: 2rem 2.2rem;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        gap: 1.4rem;
+        transition: all 0.22s;
+        position: relative;
+        overflow: hidden;
+    }
+    .hk-fcard::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(135deg, rgba(37,99,235,0.12), rgba(6,182,212,0.08));
+        opacity: 0; transition: opacity 0.22s;
+    }
+    .hk-fcard:hover { border-color: rgba(37,99,235,0.45); transform: translateY(-4px); box-shadow: 0 10px 32px rgba(37,99,235,0.25); }
+    .hk-fcard:hover::before { opacity: 1; }
+    .hk-fcard-icon {
+        width: 48px; height: 48px;
+        background: rgba(37,99,235,0.15);
+        border-radius: 12px;
+        display: flex; align-items: center; justify-content: center;
+        font-size: 2.2rem;
+        flex-shrink: 0;
+        transition: background 0.2s;
+        position: relative; z-index: 1;
+    }
+    .hk-fcard:hover .hk-fcard-icon { background: rgba(37,99,235,0.35); }
+    .hk-fcard-body { position: relative; z-index: 1; }
+    .hk-fcard-label { font-size: 1.35rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.3); margin-bottom: 0.3rem; }
+    .hk-fcard-value { font-size: 1.5rem; color: rgba(255,255,255,0.75); font-weight: 600; transition: color 0.2s; }
+    .hk-fcard:hover .hk-fcard-value { color: var(--white); }
+
+    /* Footer buttons */
+    .s-footer__buttons .btn--primary {
+        background: var(--grad-blue) !important;
+        border: none !important;
+        color: var(--white) !important;
+        font-family: var(--font) !important;
+        font-size: 1.5rem !important;
+        font-weight: 700 !important;
+        border-radius: 10px !important;
+        letter-spacing: 0 !important;
+        text-transform: none !important;
+        box-shadow: 0 4px 20px rgba(37,99,235,0.4) !important;
+        transition: all 0.22s !important;
+    }
+    .s-footer__buttons .btn--primary:hover { transform: translateY(-3px) !important; box-shadow: 0 10px 30px rgba(37,99,235,0.5) !important; }
+    .s-footer__buttons .btn--stroke {
+        background: transparent !important;
+        border: 2px solid rgba(255,255,255,0.15) !important;
+        color: rgba(255,255,255,0.65) !important;
+        font-family: var(--font) !important;
+        font-size: 1.5rem !important;
+        font-weight: 700 !important;
+        border-radius: 10px !important;
+        letter-spacing: 0 !important;
+        text-transform: none !important;
+        transition: all 0.22s !important;
+    }
+    .s-footer__buttons .btn--stroke:hover { border-color: rgba(255,255,255,0.4) !important; color: var(--white) !important; background: rgba(255,255,255,0.06) !important; transform: translateY(-3px) !important; }
+
+    .s-footer h5 { font-family: var(--font); font-size: 1.1rem; font-weight: 800; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(255,255,255,0.28); margin-bottom: 1.4rem; }
+    .s-footer .link-list a { color: rgba(255,255,255,0.5); font-size: 1.5rem; transition: color 0.2s; font-weight: 500; }
+    .s-footer .link-list a:hover { color: var(--white); }
+    .s-footer__bottom { display: none; } /* replaced by hk-footer-bottom */
+    .s-footer__social { display: none; }
+    .ss-copyright { display: none; }
+
+    /* CTA block */
+    .hk-footer-cta {
+        background: rgba(255,255,255,0.04);
+        border: 1px solid rgba(255,255,255,0.08);
+        border-radius: 20px;
+        padding: 3.6rem;
+        text-align: center;
+        max-width: 44rem;
+    }
+    .hk-footer-cta-title {
+        font-size: 2rem;
+        font-weight: 800;
+        color: var(--white);
+        margin-bottom: 1.2rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.8rem;
+    }
+    .hk-footer-cta-title::before {
+        content: '';
+        display: inline-block;
+        width: 10px; height: 10px;
+        background: var(--green);
+        border-radius: 50%;
+        animation: bdot 2s ease-in-out infinite;
+    }
+    .hk-footer-cta-sub {
+        font-size: 1.55rem;
+        color: rgba(255,255,255,0.4);
+        line-height: 1.7;
+        margin-bottom: 1.8rem;
+    }
+    .hk-footer-cta-location {
+        font-size: 1.45rem;
+        color: rgba(255,255,255,0.3);
+        font-weight: 500;
+    }
+
+    /* Clean footer bottom strip */
+    .hk-footer-bottom {
+        margin-top: 5rem;
+        border-top: 1px solid rgba(255,255,255,0.07);
+    }
+    .hk-footer-strip {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 2rem;
+        padding: 3rem 0 2rem;
+    }
+    .hk-fb-brand { display: flex; flex-direction: column; gap: 0.5rem; }
+    .hk-fb-name {
+        font-family: var(--mono);
+        font-size: 1.7rem;
+        font-weight: 600;
+        color: rgba(255,255,255,0.85);
+        letter-spacing: -0.01em;
+    }
+    .hk-fb-role { font-size: 1.4rem; color: rgba(255,255,255,0.3); font-weight: 400; }
+
+    /* Social icon buttons */
+    .hk-fb-socials { display: flex; gap: 0.8rem; align-items: center; }
+    .hk-fb-btn {
+        width: 44px; height: 44px;
+        border-radius: 12px;
+        background: rgba(255,255,255,0.05);
+        border: 1px solid rgba(255,255,255,0.09);
+        display: flex; align-items: center; justify-content: center;
+        text-decoration: none;
+        transition: all 0.25s cubic-bezier(0.34,1.56,0.64,1);
+    }
+    .hk-fb-btn svg { fill: rgba(255,255,255,0.35); stroke: none; transition: fill 0.2s; }
+    .hk-fb-btn:nth-child(3) svg { fill: none; stroke: rgba(255,255,255,0.35); stroke-width: 2; transition: stroke 0.2s; }
+    .hk-fb-btn:hover { background: rgba(37,99,235,0.22); border-color: rgba(37,99,235,0.5); transform: translateY(-5px) scale(1.08); }
+    .hk-fb-btn:hover svg { fill: var(--white); }
+    .hk-fb-btn:nth-child(3):hover svg { fill: none; stroke: var(--white); }
+
+    .hk-fb-copy { font-size: 1.35rem; color: rgba(255,255,255,0.18); }
+    .ss-go-top a { background: var(--grad-blue); border-radius: 50%; box-shadow: 0 4px 16px rgba(37,99,235,0.45); }
+    .ss-go-top a:hover { transform: translateY(-4px); box-shadow: 0 8px 24px rgba(37,99,235,0.6); }
+
+    /* ══════════════════════════════
+       SPACING OVERRIDES
+       Hudson uses vspace-6/7 (~300px)
+       override everything tightly
+    ══════════════════════════════ */
+    .s-about    { padding-top: 9rem !important; }
+    .s-works    { padding-top: 9rem !important; }
+    .s-footer   { padding-top: 9rem !important; padding-bottom: 0 !important; }
+    .section-header { margin-bottom: 3.6rem !important; }
+    .section-header .text-display-title { margin-bottom: 0 !important; }
+    .s-footer .s-footer__content { margin-top: 2.8rem !important; }
+    .s-footer .s-footer__block   { margin-bottom: 0 !important; }
+    .s-footer .attention-getter  { margin-top: 0 !important; margin-bottom: 2rem !important; }
+
+    /* ══════════════════════════════
+       INTERNSHIP SECTION
+    ══════════════════════════════ */
+    #internship {
+        background: var(--bg);
+        border-top: 1px solid var(--border);
+        position: relative;
+        overflow: hidden;
+        padding-top: 9rem;
+        padding-bottom: 9rem;
+    }
+    /* faint large background word */
+    #internship::before {
+        content: 'EXPERIENCE';
+        position: absolute;
+        top: 4rem; right: -2rem;
+        font-size: clamp(6rem, 12vw, 14rem);
+        font-weight: 900;
+        color: transparent;
+        -webkit-text-stroke: 1.5px rgba(37,99,235,0.06);
+        letter-spacing: 0.1em;
+        pointer-events: none;
+        user-select: none;
+        z-index: 0;
+        white-space: nowrap;
+    }
+
+    .hk-internship-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(34rem, 1fr));
+        gap: 2.4rem;
+        margin-top: 0.4rem;
+        position: relative;
+        z-index: 1;
+    }
+
+    .hk-icard {
+        background: var(--bg-2);
+        border: 1.5px solid var(--border);
+        border-radius: 18px;
+        padding: 0;
+        overflow: hidden;
+        transition: transform 0.28s cubic-bezier(0.34,1.56,0.64,1),
+                    box-shadow 0.28s ease,
+                    border-color 0.22s;
+        position: relative;
+    }
+    .hk-icard:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 20px 50px rgba(37,99,235,0.14);
+        border-color: var(--blue);
+    }
+
+    /* Coloured top band per card */
+    .hk-icard-band {
+        height: 5px;
+        background: var(--grad-blue);
+    }
+    .hk-icard:nth-child(2) .hk-icard-band {
+        background: linear-gradient(135deg, #06b6d4, #0891b2);
+    }
+
+    .hk-icard-body { padding: 2.6rem 2.8rem 2.4rem; }
+
+    /* Company pill + duration */
+    .hk-icard-top {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 1rem;
+        margin-bottom: 1.6rem;
+    }
+    .hk-icard-company {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+    }
+    .hk-icard-logo {
+        width: 46px; height: 46px;
+        background: var(--blue-mid);
+        border-radius: 12px;
+        display: flex; align-items: center; justify-content: center;
+        font-size: 2rem;
+        flex-shrink: 0;
+        transition: transform 0.2s;
+    }
+    .hk-icard:hover .hk-icard-logo { transform: rotate(-5deg) scale(1.1); }
+    .hk-icard:nth-child(2) .hk-icard-logo {
+        background: rgba(6,182,212,0.12);
+    }
+    .hk-icard-cname {
+        font-size: 1.35rem;
+        font-weight: 700;
+        color: var(--text);
+        line-height: 1.3;
+    }
+    .hk-icard-type {
+        font-size: 1.35rem;
+        color: var(--text-3);
+        font-weight: 500;
+        margin-top: 0.15rem;
+    }
+
+    /* Duration badge */
+    .hk-dur-badge {
+        font-family: var(--mono);
+        font-size: 1.15rem;
+        font-weight: 600;
+        color: var(--white);
+        background: var(--grad-blue);
+        padding: 0.4rem 1.1rem;
+        border-radius: 20px;
+        white-space: nowrap;
+        flex-shrink: 0;
+    }
+    .hk-icard:nth-child(2) .hk-dur-badge {
+        background: linear-gradient(135deg, #06b6d4, #0891b2);
+    }
+
+    /* Role title */
+    .hk-icard-role {
+        font-size: 2rem;
+        font-weight: 800;
+        color: var(--text);
+        letter-spacing: -0.02em;
+        margin-bottom: 0.6rem;
+        line-height: 1.2;
+    }
+
+    /* Date range */
+    .hk-icard-date {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        font-family: var(--mono);
+        font-size: 1.4rem;
+        color: var(--blue);
+        font-weight: 600;
+        margin-bottom: 2rem;
+    }
+    .hk-icard:nth-child(2) .hk-icard-date { color: var(--cyan); }
+
+    /* Divider */
+    .hk-icard-divider {
+        height: 1px;
+        background: var(--border);
+        margin-bottom: 2rem;
+    }
+
+    /* Bullet list */
+    .hk-icard-list { list-style: none; padding: 0; margin: 0 0 2rem; }
+    .hk-icard-list li {
+        display: flex;
+        gap: 1rem;
+        font-size: 1.4rem;
+        color: var(--text-2);
+        padding: 0.5rem 0;
+        line-height: 1.6;
+        border-bottom: 1px solid var(--bg-3);
+    }
+    .hk-icard-list li:last-child { border-bottom: none; }
+    .hk-icard-list li::before {
+        content: '▸';
+        color: var(--blue);
+        font-size: 1rem;
+        margin-top: 0.4rem;
+        flex-shrink: 0;
+    }
+    .hk-icard:nth-child(2) .hk-icard-list li::before { color: var(--cyan); }
+
+    /* Tech tags */
+    .hk-icard-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.7rem;
+    }
+    .hk-itag {
+        font-family: var(--mono);
+        font-size: 1.3rem;
+        font-weight: 600;
+        color: var(--blue-text);
+        background: var(--blue-mid);
+        border-radius: 6px;
+        padding: 0.4rem 1rem;
+        transition: all 0.18s;
+    }
+    .hk-itag:hover { background: var(--blue); color: var(--white); transform: translateY(-1px); }
+    .hk-icard:nth-child(2) .hk-itag {
+        color: #0e7490;
+        background: rgba(6,182,212,0.1);
+    }
+    .hk-icard:nth-child(2) .hk-itag:hover { background: var(--cyan); color: var(--white); }
+
+    /* Call-to-action strip at bottom of card */
+    .hk-icard-footer {
+        margin-top: 2.4rem;
+        padding-top: 1.8rem;
+        border-top: 1px solid var(--border);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+    }
+    .hk-icard-verified {
+        display: flex;
+        align-items: center;
+        gap: 0.6rem;
+        font-size: 1.25rem;
+        font-weight: 600;
+        color: var(--green);
+    }
+    .hk-icard-verified::before {
+        content: '✓';
+        width: 22px; height: 22px;
+        background: var(--green-bg);
+        border-radius: 50%;
+        display: flex; align-items: center; justify-content: center;
+        font-size: 1.1rem;
+        font-weight: 800;
+    }
+
+    /* ══════════════════════════════
+       CURSOR GLOW
+    ══════════════════════════════ */
+    .hk-cursor-glow {
+        position: fixed;
+        width: 500px; height: 500px;
+        border-radius: 50%;
+        background: radial-gradient(circle, rgba(37,99,235,0.1) 0%, transparent 65%);
+        pointer-events: none;
+        transform: translate(-50%, -50%);
+        z-index: 9998;
+        transition: opacity 0.3s;
+        will-change: left, top;
+    }
+
+    /* ══════════════════════════════
+       HERO FLOATING TECH ICONS
+    ══════════════════════════════ */
+    .hk-tech-float {
+        position: absolute;
+        top: 0; right: 0; bottom: 0;
+        width: 50%;
+        pointer-events: none;
+        z-index: 0;
+        display: none;
+    }
+    @media (min-width: 1100px) { .hk-tech-float { display: block; } }
+    .hk-tf-icon {
+        position: absolute;
+        width: 52px; height: 52px;
+        border-radius: 14px;
+        display: flex; align-items: center; justify-content: center;
+        font-size: 2.2rem;
+        backdrop-filter: blur(8px);
+        border: 1px solid rgba(255,255,255,0.12);
+        animation: tfloat 6s ease-in-out infinite;
+    }
+    .hk-tf-icon:nth-child(1) { top: 18%; left: 15%; background: rgba(227,76,38,0.12); animation-delay: 0s; }
+    .hk-tf-icon:nth-child(2) { top: 30%; left: 40%; background: rgba(38,77,228,0.12); animation-delay: 0.8s; }
+    .hk-tf-icon:nth-child(3) { top: 55%; left: 20%; background: rgba(240,219,79,0.12); animation-delay: 1.4s; }
+    .hk-tf-icon:nth-child(4) { top: 65%; left: 55%; background: rgba(37,99,235,0.12); animation-delay: 2s; }
+    .hk-tf-icon:nth-child(5) { top: 40%; left: 68%; background: rgba(6,182,212,0.12); animation-delay: 0.4s; }
+    .hk-tf-icon:nth-child(6) { top: 20%; left: 62%; background: rgba(240,101,40,0.12); animation-delay: 1.8s; }
+    @keyframes tfloat {
+        0%,100% { transform: translateY(0) rotate(0deg); }
+        33%      { transform: translateY(-12px) rotate(4deg); }
+        66%      { transform: translateY(6px) rotate(-3deg); }
+    }
+
+    /* ══════════════════════════════
+       WHAT I BUILD SECTION
+    ══════════════════════════════ */
+    #what-i-build {
+        background: var(--bg-3);
+        border-top: 1px solid var(--border);
+        padding-top: 9rem;
+        padding-bottom: 9rem;
+    }
+    .hk-services-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+        margin-top: 0.4rem;
+    }
+    @media (max-width: 900px) { .hk-services-grid { grid-template-columns: 1fr; } }
+
+    .hk-service-card {
+        background: var(--bg-2);
+        border: 1.5px solid var(--border);
+        border-radius: 16px;
+        padding: 3rem 2.8rem 2.8rem;
+        position: relative;
+        overflow: hidden;
+        transition: transform 0.28s cubic-bezier(0.34,1.56,0.64,1),
+                    box-shadow 0.28s ease,
+                    border-color 0.22s;
+    }
+    .hk-service-card::before {
+        content: '';
+        position: absolute;
+        bottom: 0; left: 0;
+        height: 3px; width: 0;
+        background: var(--grad-blue);
+        transition: width 0.35s ease;
+    }
+    .hk-service-card:hover { transform: translateY(-10px); box-shadow: 0 20px 50px rgba(37,99,235,0.12); border-color: var(--blue); }
+    .hk-service-card:hover::before { width: 100%; }
+
+    .hk-svc-icon {
+        width: 58px; height: 58px;
+        border-radius: 16px;
+        background: var(--blue-mid);
+        display: flex; align-items: center; justify-content: center;
+        font-size: 2.4rem;
+        margin-bottom: 2.2rem;
+        transition: transform 0.3s cubic-bezier(0.34,1.56,0.64,1);
+    }
+    .hk-service-card:hover .hk-svc-icon { transform: rotate(-8deg) scale(1.12); }
+
+    .hk-svc-title {
+        font-size: 1.9rem;
+        font-weight: 800;
+        color: var(--text);
+        margin-bottom: 1rem;
+        letter-spacing: -0.02em;
+    }
+    .hk-svc-desc {
+        font-size: 1.45rem;
+        color: var(--text-2);
+        line-height: 1.7;
+        margin-bottom: 2rem;
+    }
+    .hk-svc-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.7rem;
+    }
+    .hk-svc-tag {
+        font-family: var(--mono);
+        font-size: 1.3rem;
+        font-weight: 600;
+        color: var(--blue-text);
+        background: var(--blue-light);
+        border: 1px solid var(--blue-mid);
+        border-radius: 6px;
+        padding: 0.3rem 0.9rem;
+    }
+
+    </style>
+</head>
+<body id="top">
+    <!-- Cursor glow -->
+    <div class="hk-cursor-glow" id="hkCursor"></div>
+
+    <!-- Scroll progress -->
+    <div class="hk-progress" id="hkProgress"></div>
+
+    <div id="preloader"><div id="loader" class="dots-fade"><div></div><div></div><div></div></div></div>
+    <div id="page" class="s-pagewrap">
+
+        <!-- ══ HEADER ══ -->
+        <header class="s-header">
+            <div class="row s-header__inner">
+                <div class="s-header__block">
+                    <div class="s-header__logo"><a class="logo" href="index.html"><img src="images/logo.svg" alt="Harsh Kumar logo"></a></div>
+                    <a class="s-header__menu-toggle" href="#0"><span>Menu</span></a>
+                </div>
+                <nav class="s-header__nav">
+                    <ul class="s-header__menu-links">
+                        <li class="current"><a class="smoothscroll" href="#intro">Home</a></li>
+                        <li><a class="smoothscroll" href="#about">About</a></li>
+                        <li><a class="smoothscroll" href="#works">Projects</a></li>
+                        <li><a class="smoothscroll" href="#internship">Internships</a></li>
+                        <li><a class="smoothscroll" href="#footer">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <!-- ══ HERO ══ -->
+        <section id="intro" class="s-intro target-section">
+            <div class="row s-intro__content width-sixteen-col">
+                <div class="column lg-12 s-intro__content-inner grid-block grid-16">
+                    <div class="s-intro__content-text">
+
+                        <div class="hk-badge">
+                            <span class="hk-badge-dot"></span>
+                            Available for opportunities
+                        </div>
+
+                        <div class="s-intro__content-pretitle">// front-end developer</div>
+
+                        <h1 class="s-intro__content-title">
+                            Hi, I'm<br>
+                            <span class="name-gradient">Harsh Kumar.</span>
+                        </h1>
+
+                        <div class="hk-typewriter-wrap">
+                            I build&nbsp;<span id="hk-typewriter"></span><span class="cursor"></span>
+                        </div>
+
+                        <p class="hk-hero-sub">
+                            Clean code. Responsive layouts. Great user experience. Based in Patna, India — currently pursuing my MCA.
+                        </p>
+
+                        <div class="hk-hero-stats">
+                            <div class="hk-stat-pill"><span>4+</span> Projects Built</div>
+                            <div class="hk-stat-pill"><span>2</span> Internships Done</div>
+                            <div class="hk-stat-pill"><span>90+</span> Days Industry Exp.</div>
+                            <div class="hk-stat-pill"><span>3</span> Certifications</div>
+                        </div>
+
+                        <div class="s-intro__content-btns">
+                            <a class="smoothscroll btn" href="#works">View Projects</a>
+                            <a class="smoothscroll btn btn--stroke" href="#footer">Contact Me</a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <ul class="s-intro__social social-list">
+                <li><a href="https://linkedin.com/in/harsh7429" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg><span class="u-screen-reader-text">LinkedIn</span></a></li>
+                <li><a href="https://github.com/harsh7429" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2z"/></svg><span class="u-screen-reader-text">GitHub</span></a></li>
+            </ul>
+
+            <!-- Floating tech icons -->
+            <div class="hk-tech-float" aria-hidden="true">
+                <div class="hk-tf-icon">🌐</div>
+                <div class="hk-tf-icon">🎨</div>
+                <div class="hk-tf-icon">⚡</div>
+                <div class="hk-tf-icon">🐙</div>
+                <div class="hk-tf-icon">📐</div>
+                <div class="hk-tf-icon">🖼️</div>
+            </div>
+
+            <div class="s-intro__content-media"><img src="images/intro-bg.jpg" srcset="images/intro-bg.jpg 1x, images/intro-bg.jpg 2x" alt="Harsh Kumar — Front-End Developer working at laptop"></div>
+            <div class="s-intro__btn-download"><a class="btn btn--stroke" href="harsh_kumar_resume.pdf" download="Harsh_Kumar_Resume.pdf">Download CV</a></div>
+            <div class="s-intro__scroll-down"><a href="#about" class="smoothscroll"><div class="scroll-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M11.178 19.569a.998.998 0 0 0 1.644 0l9-13A.999.999 0 0 0 21 5H3a1.002 1.002 0 0 0-.822 1.569l9 13z"></path></svg></div><span class="scroll-text u-screen-reader-text">Scroll Down</span></a></div>
+        </section>
+
+        <!-- ══ MARQUEE ══ -->
+        <div class="hk-marquee">
+            <div class="hk-marquee-track">
+                <span class="hk-marquee-item"><span class="dot">✦</span>HTML5</span>
+                <span class="hk-marquee-item"><span class="dot">✦</span>CSS3</span>
+                <span class="hk-marquee-item"><span class="dot">✦</span>JavaScript</span>
+                <span class="hk-marquee-item"><span class="dot">✦</span>Responsive Design</span>
+                <span class="hk-marquee-item"><span class="dot">✦</span>Git &amp; GitHub</span>
+                <span class="hk-marquee-item"><span class="dot">✦</span>Flexbox &amp; Grid</span>
+                <span class="hk-marquee-item"><span class="dot">✦</span>DOM Manipulation</span>
+                <span class="hk-marquee-item"><span class="dot">✦</span>Figma</span>
+                <span class="hk-marquee-item"><span class="dot">✦</span>VS Code</span>
+                <span class="hk-marquee-item"><span class="dot">✦</span>Chrome DevTools</span>
+                <!-- duplicate -->
+                <span class="hk-marquee-item"><span class="dot">✦</span>HTML5</span>
+                <span class="hk-marquee-item"><span class="dot">✦</span>CSS3</span>
+                <span class="hk-marquee-item"><span class="dot">✦</span>JavaScript</span>
+                <span class="hk-marquee-item"><span class="dot">✦</span>Responsive Design</span>
+                <span class="hk-marquee-item"><span class="dot">✦</span>Git &amp; GitHub</span>
+                <span class="hk-marquee-item"><span class="dot">✦</span>Flexbox &amp; Grid</span>
+                <span class="hk-marquee-item"><span class="dot">✦</span>DOM Manipulation</span>
+                <span class="hk-marquee-item"><span class="dot">✦</span>Figma</span>
+                <span class="hk-marquee-item"><span class="dot">✦</span>VS Code</span>
+                <span class="hk-marquee-item"><span class="dot">✦</span>Chrome DevTools</span>
+            </div>
+        </div>
+
+        <!-- ══ WHAT I BUILD ══ -->
+        <section id="what-i-build">
+            <div class="row">
+                <div class="column xl-12">
+                    <div class="section-header" data-num="01" data-aos="fade-up">
+                        <h2 class="text-display-title">What I Build</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="column xl-12">
+                    <div class="hk-services-grid">
+
+                        <div class="hk-service-card" data-aos="fade-up" data-aos-delay="0">
+                            <div class="hk-svc-icon">🌐</div>
+                            <div class="hk-svc-title">Responsive Websites</div>
+                            <div class="hk-svc-desc">Clean, mobile-first web interfaces that look great on every screen size and load fast.</div>
+                            <div class="hk-svc-tags">
+                                <span class="hk-svc-tag">HTML5</span>
+                                <span class="hk-svc-tag">CSS3</span>
+                                <span class="hk-svc-tag">Flexbox</span>
+                                <span class="hk-svc-tag">Grid</span>
+                            </div>
+                        </div>
+
+                        <div class="hk-service-card" data-aos="fade-up" data-aos-delay="100">
+                            <div class="hk-svc-icon">⚡</div>
+                            <div class="hk-svc-title">Interactive UI</div>
+                            <div class="hk-svc-desc">Dynamic, interactive interfaces with smooth animations, real-time feedback and great UX.</div>
+                            <div class="hk-svc-tags">
+                                <span class="hk-svc-tag">JavaScript</span>
+                                <span class="hk-svc-tag">DOM</span>
+                                <span class="hk-svc-tag">Events</span>
+                                <span class="hk-svc-tag">Forms</span>
+                            </div>
+                        </div>
+
+                        <div class="hk-service-card" data-aos="fade-up" data-aos-delay="200">
+                            <div class="hk-svc-icon">🎨</div>
+                            <div class="hk-svc-title">UI/UX Design</div>
+                            <div class="hk-svc-desc">User-centred design — wireframes, prototypes, and polished app screens that prioritise usability.</div>
+                            <div class="hk-svc-tags">
+                                <span class="hk-svc-tag">Figma</span>
+                                <span class="hk-svc-tag">Prototyping</span>
+                                <span class="hk-svc-tag">Wireframing</span>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ══ ABOUT ══ -->
+        <section id="about" class="s-about target-section">
+            <div class="row s-about__content">
+                <div class="column xl-12">
+
+                    <div class="section-header" data-num="02">
+                        <h2 class="text-display-title">About Me</h2>
+                    </div>
+
+                    <p class="attention-getter" data-aos="fade-up">
+                        I'm a <strong>Front-End Developer</strong> from Patna, India. I write clean HTML, CSS, and JavaScript to build responsive websites that work well on any device. Currently pursuing my MCA while building real projects.
+                    </p>
+                    <p class="attention-getter" data-aos="fade-up" data-aos-delay="80">
+                        I focus on writing <strong>well-structured, readable code</strong> — and on making sure every project is fast, accessible, and genuinely easy to use.
+                    </p>
+
+                    <!-- Skills grid -->
+                    <div class="hk-skills-wrap" data-aos="fade-up" data-aos-delay="120">
+                        <div class="hk-skills-title">Technical Skills</div>
+                        <div class="hk-skills-grid">
+                            <span class="hk-skill"><span class="hk-skill-icon">🌐</span>HTML5</span>
+                            <span class="hk-skill"><span class="hk-skill-icon">🎨</span>CSS3</span>
+                            <span class="hk-skill"><span class="hk-skill-icon">⚡</span>JavaScript</span>
+                            <span class="hk-skill"><span class="hk-skill-icon">📐</span>Flexbox</span>
+                            <span class="hk-skill"><span class="hk-skill-icon">🔲</span>CSS Grid</span>
+                            <span class="hk-skill"><span class="hk-skill-icon">📱</span>Responsive Design</span>
+                            <span class="hk-skill"><span class="hk-skill-icon">🔧</span>DOM Manipulation</span>
+                            <span class="hk-skill"><span class="hk-skill-icon">✅</span>Form Validation</span>
+                            <span class="hk-skill"><span class="hk-skill-icon">🐙</span>Git &amp; GitHub</span>
+                            <span class="hk-skill"><span class="hk-skill-icon">💻</span>VS Code</span>
+                            <span class="hk-skill"><span class="hk-skill-icon">🔍</span>Chrome DevTools</span>
+                            <span class="hk-skill"><span class="hk-skill-icon">🖼️</span>Figma</span>
+                        </div>
+                    </div>
+
+                    <!-- Certifications -->
+                    <div class="hk-certs-wrap" data-aos="fade-up" data-aos-delay="100">
+                        <div class="hk-skills-title">Certifications</div>
+                        <div class="hk-cert-grid">
+                            <div class="hk-cert-card">
+                                <div class="hk-cert-icon">🎓</div>
+                                <div class="hk-cert-body">
+                                    <div class="hk-cert-name">Intro to Front-End Development</div>
+                                    <div class="hk-cert-issuer">Simplilearn</div>
+                                </div>
+                            </div>
+                            <div class="hk-cert-card">
+                                <div class="hk-cert-icon">📱</div>
+                                <div class="hk-cert-body">
+                                    <div class="hk-cert-name">Android &amp; Cloud Computing</div>
+                                    <div class="hk-cert-issuer">CEPTA Infotech</div>
+                                </div>
+                            </div>
+                            <div class="hk-cert-card">
+                                <div class="hk-cert-icon">🤖</div>
+                                <div class="hk-cert-body">
+                                    <div class="hk-cert-name">Prompt Engineering</div>
+                                    <div class="hk-cert-issuer">Simplilearn</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Experience / Education / Contact -->
+                    <div class="grid-list-items s-about__blocks" style="margin-top: 6.4rem;">
+
+                        <!-- Experience — timeline -->
+                        <div class="grid-list-items__item s-about__block" data-aos="fade-up">
+                            <h4 class="s-about__block-title">Experience</h4>
+                            <div class="hk-timeline">
+                                <div class="hk-timeline-item">
+                                    <div class="hk-tl-role">UI/UX &amp; Android Intern</div>
+                                    <div class="hk-tl-company">
+                                        CEPTA Infotech Pvt. Ltd.
+                                        <span class="hk-tl-badge">6 Weeks</span>
+                                    </div>
+                                    <ul class="hk-tl-list">
+                                        <li>Designed Android app screens for a Money Management app</li>
+                                        <li>Built dashboards, input forms and navigation flows</li>
+                                        <li>Tools: Android Studio, XML Layouts, Figma</li>
+                                    </ul>
+                                </div>
+                                <div class="hk-timeline-item">
+                                    <div class="hk-tl-role">IoT Development Intern</div>
+                                    <div class="hk-tl-company">
+                                        TechProLabz
+                                        <span class="hk-tl-badge">45 Days</span>
+                                    </div>
+                                    <ul class="hk-tl-list">
+                                        <li>Built a home automation system for remote appliance control</li>
+                                        <li>Integrated sensors and microcontrollers for automation</li>
+                                        <li>Documented system workflow and module integration</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div style="margin-top:1.8rem;text-align:center;">
+                                <a class="smoothscroll" href="#internship" style="display:inline-flex;align-items:center;gap:0.6rem;font-size:1.35rem;font-weight:700;color:var(--blue);text-decoration:none;background:var(--blue-light);border:1.5px solid var(--blue-mid);padding:0.8rem 2rem;border-radius:8px;transition:all 0.2s;" onmouseover="this.style.background='var(--blue)';this.style.color='#fff';" onmouseout="this.style.background='var(--blue-light)';this.style.color='var(--blue)';">
+                                    View Full Internship Details ↓
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Education -->
+                        <div class="grid-list-items__item s-about__block" data-aos="fade-up" data-aos-delay="80">
+                            <h4 class="s-about__block-title">Education</h4>
+                            <div class="hk-edu-card">
+                                <div>
+                                    <div class="hk-edu-degree">Master of Computer Applications</div>
+                                    <div class="hk-edu-school">L.N. Mishra Institute, Patna</div>
+                                </div>
+                                <div class="hk-edu-badge">
+                                    <div class="hk-edu-year">Pursuing</div>
+                                </div>
+                            </div>
+                            <div class="hk-edu-card">
+                                <div>
+                                    <div class="hk-edu-degree">Bachelor of Computer Applications</div>
+                                    <div class="hk-edu-school">Amity University, Patna</div>
+                                </div>
+                                <div class="hk-edu-badge">
+                                    <div class="hk-edu-year">2023</div>
+                                    <div class="hk-edu-cgpa">7.39 / 10</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Contact -->
+                        <div class="grid-list-items__item s-about__block" data-aos="fade-up" data-aos-delay="120">
+                            <h4 class="s-about__block-title">Contact</h4>
+                            <ul class="hk-contact-list">
+                                <li class="hk-contact-row">
+                                    <div class="hk-ci">✉️</div>
+                                    <div><div class="hk-cl">Email</div><a href="mailto:harsh7429@gmail.com" class="hk-cv">harsh7429@gmail.com</a></div>
+                                </li>
+                                <li class="hk-contact-row">
+                                    <div class="hk-ci">📱</div>
+                                    <div><div class="hk-cl">Phone</div><a href="tel:+919110158576" class="hk-cv">+91-9110158576</a></div>
+                                </li>
+                                <li class="hk-contact-row">
+                                    <div class="hk-ci">💼</div>
+                                    <div><div class="hk-cl">LinkedIn</div><a href="https://linkedin.com/in/harsh7429" target="_blank" class="hk-cv">linkedin.com/in/harsh7429</a></div>
+                                </li>
+                                <li class="hk-contact-row">
+                                    <div class="hk-ci">📍</div>
+                                    <div><div class="hk-cl">Location</div><span class="hk-cv plain">Patna, Bihar, India</span></div>
+                                </li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ══ PROJECTS ══ -->
+        <section id="works" class="s-works target-section">
+            <div class="row">
+                <div class="column xl-12">
+                    <div class="section-header" data-num="02">
+                        <h2 class="text-display-title">Featured Projects</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row folio-entries">
+                <div class="column entry" data-aos="fade-up">
+                    <a href="images/folio/gallery/g-turban.jpg" class="entry__link glightbox" data-glightbox="title: E-Commerce Website; description: .entry__desc-01">
+                        <div class="entry__thumb"><img loading="lazy" src="images/folio/white_turban.jpg" srcset="images/folio/white_turban.jpg 1x, images/folio/white_turban@2x.jpg 2x" alt="E-Commerce Website"><span class="hk-view">View Project ↗</span></div>
+                        <div class="entry__info"><h4 class="entry__title">E-Commerce Website</h4><div class="entry__cat">HTML · CSS · JavaScript</div></div>
+                    </a>
+                    <div class="glightbox-desc entry__desc-01"><p>Responsive e-commerce site inspired by Myntra. Product grid, navbar, cart interactions — Flexbox &amp; Grid layout. <a href="#0">View on GitHub ↗</a></p></div>
+                </div>
+                <div class="column entry" data-aos="fade-up" data-aos-delay="80">
+                    <a href="images/folio/gallery/g-woodcraft.jpg" class="entry__link glightbox" data-glightbox="title: Money Management App; description: .entry__desc-02">
+                        <div class="entry__thumb"><img loading="lazy" src="images/folio/woodcraft.jpg" srcset="images/folio/woodcraft.jpg 1x, images/folio/woodcraft@2x.jpg 2x" alt="Money Management App"><span class="hk-view">View Project ↗</span></div>
+                        <div class="entry__info"><h4 class="entry__title">Money Management App</h4><div class="entry__cat">Figma · Android Studio · XML</div></div>
+                    </a>
+                    <div class="glightbox-desc entry__desc-02"><p>Android app UI designed at CEPTA Infotech. Dashboards, forms, navigation — clean layout and usability. <a href="#0">View on GitHub ↗</a></p></div>
+                </div>
+                <div class="column entry" data-aos="fade-up" data-aos-delay="120">
+                    <a href="images/folio/gallery/g-tropical.jpg" class="entry__link glightbox" data-glightbox="title: UI/UX App Screens; description: .entry__desc-03">
+                        <div class="entry__thumb"><img loading="lazy" src="images/folio/tropical.jpg" srcset="images/folio/tropical.jpg 1x, images/folio/tropical@2x.jpg 2x" alt="UI/UX App Screens"><span class="hk-view">View Project ↗</span></div>
+                        <div class="entry__info"><h4 class="entry__title">UI/UX App Screens</h4><div class="entry__cat">Figma · Wireframing · Prototyping</div></div>
+                    </a>
+                    <div class="glightbox-desc entry__desc-03"><p>Mobile app screens with onboarding and navigation. Designed in Figma with consistent components. <a href="#0">View on GitHub ↗</a></p></div>
+                </div>
+                <div class="column entry" data-aos="fade-up" data-aos-delay="160">
+                    <a href="images/folio/gallery/g-grayscale.jpg" class="entry__link glightbox" data-glightbox="title: IoT Home Automation; description: .entry__desc-04">
+                        <div class="entry__thumb"><img loading="lazy" src="images/folio/grayscale.jpg" srcset="images/folio/grayscale.jpg 1x, images/folio/grayscale@2x.jpg 2x" alt="IoT Home Automation"><span class="hk-view">View Project ↗</span></div>
+                        <div class="entry__info"><h4 class="entry__title">IoT Home Automation</h4><div class="entry__cat">Microcontrollers · Sensors · IoT</div></div>
+                    </a>
+                    <div class="glightbox-desc entry__desc-04"><p>Home automation — remote appliance control via sensors and microcontrollers. Fully documented. <a href="#0">View on GitHub ↗</a></p></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ══ INTERNSHIP ══ -->
+        <section id="internship" class="target-section">
+            <div class="row">
+                <div class="column xl-12">
+                    <div class="section-header" data-num="04" data-aos="fade-up">
+                        <h2 class="text-display-title">Internship Experience</h2>
+                    </div>
+                    <p class="attention-getter" data-aos="fade-up" data-aos-delay="60" style="margin-bottom: 4.8rem;">
+                        Real-world industry experience that shaped my skills as a developer — building products people actually use.
+                    </p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="column xl-12">
+                    <div class="hk-internship-grid">
+
+                        <!-- Card 1: CEPTA -->
+                        <div class="hk-icard" data-aos="fade-up" data-aos-delay="0">
+                            <div class="hk-icard-band"></div>
+                            <div class="hk-icard-body">
+                                <div class="hk-icard-top">
+                                    <div class="hk-icard-company">
+                                        <div class="hk-icard-logo">🏢</div>
+                                        <div>
+                                            <div class="hk-icard-cname">CEPTA Infotech Pvt. Ltd.</div>
+                                            <div class="hk-icard-type">Software Company · Patna</div>
+                                        </div>
+                                    </div>
+                                    <span class="hk-dur-badge">6 Weeks</span>
+                                </div>
+
+                                <div class="hk-icard-role">UI/UX &amp; Android Intern</div>
+                                <div class="hk-icard-date">📅 2024 · On-site</div>
+                                <div class="hk-icard-divider"></div>
+
+                                <ul class="hk-icard-list">
+                                    <li>Designed complete Android app UI for a Money Management application used for tracking daily expenses and budgets</li>
+                                    <li>Built interactive dashboards, input forms, and multi-screen navigation flows prioritising usability</li>
+                                    <li>Created reusable UI components and maintained design consistency across all screens</li>
+                                    <li>Collaborated with the development team to align designs with technical constraints</li>
+                                </ul>
+
+                                <div class="hk-icard-tags">
+                                    <span class="hk-itag">Android Studio</span>
+                                    <span class="hk-itag">XML Layouts</span>
+                                    <span class="hk-itag">Figma</span>
+                                    <span class="hk-itag">UI/UX Design</span>
+                                    <span class="hk-itag">Prototyping</span>
+                                </div>
+
+                                <div class="hk-icard-footer">
+                                    <div class="hk-icard-verified">Internship Certified</div>
+                                    <span style="font-size:1.2rem;color:var(--text-3);font-weight:500;">Android &amp; Cloud Cert. issued</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 2: TechProLabz -->
+                        <div class="hk-icard" data-aos="fade-up" data-aos-delay="120">
+                            <div class="hk-icard-band"></div>
+                            <div class="hk-icard-body">
+                                <div class="hk-icard-top">
+                                    <div class="hk-icard-company">
+                                        <div class="hk-icard-logo">⚙️</div>
+                                        <div>
+                                            <div class="hk-icard-cname">TechProLabz</div>
+                                            <div class="hk-icard-type">IoT &amp; Tech Lab</div>
+                                        </div>
+                                    </div>
+                                    <span class="hk-dur-badge">45 Days</span>
+                                </div>
+
+                                <div class="hk-icard-role">IoT Development Intern</div>
+                                <div class="hk-icard-date">📅 2024 · On-site</div>
+                                <div class="hk-icard-divider"></div>
+
+                                <ul class="hk-icard-list">
+                                    <li>Built a fully functional IoT home automation system enabling remote control of household appliances</li>
+                                    <li>Integrated multiple sensors and microcontroller modules for automated trigger-based behaviour</li>
+                                    <li>Programmed device logic and communication protocols between hardware components</li>
+                                    <li>Documented the complete system architecture, wiring diagrams, and module integration flow</li>
+                                </ul>
+
+                                <div class="hk-icard-tags">
+                                    <span class="hk-itag">Microcontrollers</span>
+                                    <span class="hk-itag">Sensors</span>
+                                    <span class="hk-itag">IoT Protocols</span>
+                                    <span class="hk-itag">Circuit Design</span>
+                                    <span class="hk-itag">Documentation</span>
+                                </div>
+
+                                <div class="hk-icard-footer">
+                                    <div class="hk-icard-verified">Internship Certified</div>
+                                    <span style="font-size:1.2rem;color:var(--text-3);font-weight:500;">Hardware + Software project</span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ══ STATS — animated glassmorphism cards ══ -->
+        <section id="numbers">
+            <div class="row">
+                <div class="column xl-12">
+                    <div class="hk-stats-grid">
+
+                        <div class="hk-stat-card" data-aos="fade-up" data-aos-delay="0">
+                            <div class="hk-stat-icon hk-stat-icon-blue">🗂️</div>
+                            <div class="hk-stat-num">
+                                <span class="hk-count" data-target="4">0</span><sup>+</sup>
+                            </div>
+                            <div class="hk-stat-label">Projects</div>
+                            <div class="hk-stat-desc">E-Commerce, IoT, Android UI &amp; more</div>
+                        </div>
+
+                        <div class="hk-stat-card" data-aos="fade-up" data-aos-delay="80">
+                            <div class="hk-stat-icon hk-stat-icon-cyan">💼</div>
+                            <div class="hk-stat-num">
+                                <span class="hk-count" data-target="2">0</span>
+                            </div>
+                            <div class="hk-stat-label">Internships</div>
+                            <div class="hk-stat-desc">CEPTA Infotech &amp; TechProLabz</div>
+                        </div>
+
+                        <div class="hk-stat-card" data-aos="fade-up" data-aos-delay="160">
+                            <div class="hk-stat-icon hk-stat-icon-green">⚡</div>
+                            <div class="hk-stat-num">
+                                <span class="hk-count" data-target="90">0</span><sup>+</sup>
+                            </div>
+                            <div class="hk-stat-label">Days Industry Exp.</div>
+                            <div class="hk-stat-desc">Hands-on real-world work</div>
+                        </div>
+
+                        <div class="hk-stat-card" data-aos="fade-up" data-aos-delay="240">
+                            <div class="hk-stat-icon hk-stat-icon-purple">🎓</div>
+                            <div class="hk-stat-num">
+                                <span class="hk-count" data-target="3">0</span>
+                            </div>
+                            <div class="hk-stat-label">Certifications</div>
+                            <div class="hk-stat-desc">Front-End, Android, Prompt Eng.</div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ══ FOOTER / CONTACT ══ -->
+        <footer id="footer" class="s-footer target-section">
+
+            <!-- Section header -->
+            <div class="row">
+                <div class="column lg-12">
+                    <div class="section-header light-on-dark" data-num="05">
+                        <h2 class="text-display-title" data-aos="fade-up">Get In Touch</h2>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Intro text + contact cards -->
+            <div class="row s-footer__content">
+                <div class="column xl-6 md-12 s-footer__block s-footer__about" data-aos="fade-up">
+                    <p class="attention-getter">
+                        I'm looking for front-end developer roles and internships. If you have a project or an opportunity, I'd love to hear from you.
+                    </p>
+                    <div class="hk-footer-grid">
+                        <a href="mailto:harsh7429@gmail.com" class="hk-fcard">
+                            <div class="hk-fcard-icon">✉️</div>
+                            <div class="hk-fcard-body"><div class="hk-fcard-label">Email</div><div class="hk-fcard-value">harsh7429@gmail.com</div></div>
+                        </a>
+                        <a href="tel:+919110158576" class="hk-fcard">
+                            <div class="hk-fcard-icon">📱</div>
+                            <div class="hk-fcard-body"><div class="hk-fcard-label">Phone</div><div class="hk-fcard-value">+91-9110158576</div></div>
+                        </a>
+                        <a href="https://linkedin.com/in/harsh7429" target="_blank" class="hk-fcard">
+                            <div class="hk-fcard-icon">💼</div>
+                            <div class="hk-fcard-body"><div class="hk-fcard-label">LinkedIn</div><div class="hk-fcard-value">linkedin.com/in/harsh7429</div></div>
+                        </a>
+                        <a href="https://github.com/harsh7429" target="_blank" class="hk-fcard">
+                            <div class="hk-fcard-icon">🐙</div>
+                            <div class="hk-fcard-body"><div class="hk-fcard-label">GitHub</div><div class="hk-fcard-value">github.com/harsh7429</div></div>
+                        </a>
+                    </div>
+                </div>
+                <div class="column xl-6 md-12 s-footer__block" data-aos="fade-up" data-aos-delay="80" style="display:flex;align-items:center;justify-content:center;">
+                    <!-- CTA block -->
+                    <div class="hk-footer-cta">
+                        <div class="hk-footer-cta-title">Open to work</div>
+                        <div class="hk-footer-cta-sub">Available for full-time roles, internships &amp; freelance projects in front-end development.</div>
+                        <div class="hk-footer-cta-location">📍 Patna, Bihar, India</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Action buttons -->
+            <div class="row s-footer__buttons" data-aos="fade-up" style="margin-top:4rem;">
+                <div class="column xl-6 tab-12">
+                    <a href="mailto:harsh7429@gmail.com" class="btn btn--primary btn--large u-fullwidth">Send Email →</a>
+                </div>
+                <div class="column xl-6 tab-12">
+                    <a href="harsh_kumar_resume.pdf" download="Harsh_Kumar_Resume.pdf" class="btn btn--stroke btn--large u-fullwidth">Download CV ↓</a>
+                </div>
+            </div>
+
+            <!-- Clean bottom branding strip -->
+            <div class="hk-footer-bottom" data-aos="fade-up">
+                <div class="row">
+                    <div class="column xl-12">
+                        <div class="hk-footer-strip">
+                            <!-- Brand identity -->
+                            <div class="hk-fb-brand">
+                                <span class="hk-fb-name">&lt;Harsh /&gt;</span>
+                                <span class="hk-fb-role">Front-End Developer · Patna, India</span>
+                            </div>
+                            <!-- Social icon buttons -->
+                            <div class="hk-fb-socials">
+                                <a href="https://github.com/harsh7429" target="_blank" class="hk-fb-btn" aria-label="GitHub">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2z"/></svg>
+                                </a>
+                                <a href="https://linkedin.com/in/harsh7429" target="_blank" class="hk-fb-btn" aria-label="LinkedIn">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
+                                </a>
+                                <a href="mailto:harsh7429@gmail.com" class="hk-fb-btn" aria-label="Email">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                                </a>
+                            </div>
+                            <!-- Copyright -->
+                            <div class="hk-fb-copy">© 2025 Harsh Kumar. All rights reserved.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="ss-go-top"><a class="smoothscroll" title="Back to Top" href="#top"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M5.536 21.886a1.004 1.004 0 0 0 1.033-.064l13-9a1 1 0 0 0 0-1.644l-13-9A1 1 0 0 0 5 3v18a1 1 0 0 0 .536.886z"></path></svg></a><span>Back To Top</span></div>
+
+        </footer>
+    </div>
+
+    <!-- AOS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+    // Cursor glow
+    const cursor = document.getElementById('hkCursor');
+    let mouseX = 0, mouseY = 0, curX = 0, curY = 0;
+    document.addEventListener('mousemove', e => { mouseX = e.clientX; mouseY = e.clientY; });
+    (function animCursor() {
+        curX += (mouseX - curX) * 0.12;
+        curY += (mouseY - curY) * 0.12;
+        cursor.style.left = curX + 'px';
+        cursor.style.top  = curY + 'px';
+        requestAnimationFrame(animCursor);
+    })();
+
+    // Init AOS
+    AOS.init({ duration: 600, once: true, offset: 80, easing: 'ease-out-cubic' });
+
+    // Scroll progress bar
+    window.addEventListener('scroll', () => {
+        const doc = document.documentElement;
+        const pct = (doc.scrollTop / (doc.scrollHeight - doc.clientHeight)) * 100;
+        document.getElementById('hkProgress').style.width = pct + '%';
+    });
+
+    // Typewriter
+    const words = [
+        'responsive websites.',
+        'clean HTML & CSS.',
+        'interactive UIs.',
+        'accessible layouts.',
+        'front-end projects.'
+    ];
+    let wi = 0, ci = 0, deleting = false;
+    const el = document.getElementById('hk-typewriter');
+    function type() {
+        const word = words[wi];
+        el.textContent = deleting ? word.slice(0, --ci) : word.slice(0, ++ci);
+        if (!deleting && ci === word.length) { deleting = true; setTimeout(type, 1600); return; }
+        if (deleting && ci === 0) { deleting = false; wi = (wi + 1) % words.length; }
+        setTimeout(type, deleting ? 55 : 90);
+    }
+    setTimeout(type, 1200);
+
+    // Count-up animation for stats
+    function animateCount(el) {
+        const target = parseInt(el.dataset.target);
+        const duration = 1600;
+        const step = target / (duration / 16);
+        let current = 0;
+        const timer = setInterval(() => {
+            current += step;
+            if (current >= target) {
+                el.textContent = target;
+                clearInterval(timer);
+            } else {
+                el.textContent = Math.floor(current);
+            }
+        }, 16);
+    }
+
+    // Trigger countup when stats section enters viewport
+    const statsObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.querySelectorAll('.hk-count').forEach(animateCount);
+                statsObserver.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.3 });
+
+    const numbersSection = document.getElementById('numbers');
+    if (numbersSection) statsObserver.observe(numbersSection);
+    </script>
+</body>
+</html>
